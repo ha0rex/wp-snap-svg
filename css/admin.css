@@ -1,0 +1,118 @@
+.vc_el-container .vc_extend_snap_svg, .wpb_element_wrapper .vc_extend_snap_svg {
+    background: url(../assets/icon-vc.png) no-repeat center center;
+    background-size:100% auto;
+    float:left;
+    margin-right:10px;
+    margin-bottom:30px;
+}
+
+.wpb_vc_responsive_website_preview .scale, .wpb_vc_responsive_website_preview .disable-navigation {
+	display:none;
+}
+
+#wp-snap-svg-editor pre {
+	margin:0;
+}
+
+#wp-snap-svg-editor {
+	height:calc( 100vh - 500px );
+	width:100%;
+}
+
+.wp-snap-svg-editors-container, .wp-snap-svg-preview-container, .wp-snap-svg-layers-container {
+	width:32%;
+	display:inline-block;
+	height:calc(100%);
+	vertical-align: top;
+	overflow-y:auto;
+}
+
+.wp-snap-svg-preview-container {
+	margin-left:20px;
+	height:calc(100% - 75px);
+	margin-bottom:20px;
+	overflow:hidden;
+}
+
+.wp-snap-svg-layers-container ul {
+	padding-bottom:0px;
+	margin-left:20px;
+}
+
+.wp-snap-svg-layers-container ul li {
+	margin:0;
+}
+
+.wp-snap-svg-layers-container ul li ul {
+	display:none;
+}
+
+.wp-snap-svg-layers-container ul li a {
+	background:#F9F9F9;
+	border:1px solid rgb(238, 238, 238);
+	margin-bottom:2px;
+	display:block;
+	height:30px;
+	line-height:30px;
+	padding:0 10px;
+}
+
+.wp-snap-svg-layers-container ul li .fill {
+	display:inline-block;
+	float:left;
+	width:15px;
+	height:15px;
+	border-radius:50%;
+	margin:9px 5px 0 5px;
+	border:1px solid #b6b6b6;
+}
+
+.wp-snap-svg-layers-container ul li.selected > a {
+	background:#EBEBEB;
+	border-color:#aaaaaa;
+}
+
+.wp-snap-svg-layers-container ul li a:hover {
+	cursor:default;
+}
+
+.wp-snap-svg-preview-container .svg-wrapper {
+	width:100%;
+	height:100%;
+}
+
+.wp-snap-svg-preview-container .svg-wrapper svg {
+	width:100%;
+	height:auto;
+	background:#F9F9F9;
+} 
+
+.wp-snap-svg-preview-container .svg-inner-wrapper {
+	/* max-width:100%;
+	max-height:100%; */
+}
+
+.html-code-container, .js-code-container {
+	height:43%;
+	margin-bottom:60px;
+}
+
+#editor-html {
+	width:100%;
+	height:100%;
+	border:1px solid rgb(238, 238, 238);
+}
+
+#editor-js {
+	width:100%;
+	height:100%;
+	border:1px solid rgb(238, 238, 238);
+}
+
+#console {
+	width:99%;
+	padding-right:10px;
+	height:100px;
+	color:red !important;
+	border:1px solid rgb(238, 238, 238);
+}
