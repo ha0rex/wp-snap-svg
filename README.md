@@ -31,9 +31,11 @@ Shortcode atts are available in the $atts JS object. By default "extras" shortco
 
 <h3>How to embed your animation?</h3>
 <strong>[snap-svg-animation id="ID-OF-ANIMATION" start_when_in_viewport="true/false" start_when_in_viewport_offset="pixels" start_when_in_viewport_delay="seconds" html_id="HTML ID" html_class="HTML CLASSNAMES" extras="EXTRAS FIELD (optional)"]</strong><br />
-<br />
-Set "start_when_in_viewport" attribute to true, if you want your animations to start only when it appears on screen<br />
-You can set up an offset in pixels by the "start_when_in_viewport_offset", and a delay by the "start_when_in_viewport_delay" attributes.<br />
-"extras" field is useful if you want to pass data from your shortcode to your animation JS script
+
+<ul>
+	<li>Set "start_when_in_viewport" attribute to true, if you want your animations to start only when it appears on screen</li>
+	<li>You can set up an offset in pixels by the "start_when_in_viewport_offset", and a delay by the "start_when_in_viewport_delay" attributes.</li>
+	<li>"extras" field is useful if you want to pass data from your shortcode to your animation JS script</li>
+</ul>
 
 
