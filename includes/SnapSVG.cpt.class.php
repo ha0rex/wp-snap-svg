@@ -121,19 +121,44 @@ class SnapSVGCPT {
 		$SnapSVG->loadSnapSVGJS()->enqueueFrontEndJS();
 		
 		$animation_html = $animation ? $animation['html'] : '<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg id="" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg id="" width="400" height="400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: WP Snap.SVG '.$SnapSVG->pluginVersion.' - http://levi.racz.nl/wp-snap-svg -->
+	
+	<!-- EXAMPLE -->
+	<circle id="my_circle" cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+	<!-- EXAMPLE END -->
 	
 	<!-- '.__('Your SVG Code goes here...', 'wp-snap-svg').' -->
 </svg>';
 		
-		$animation_js = $animation ? $animation['js'] : 'Animation.start = function($scope) {
-	/**
-	 * Your Animation JS code
-	 * $scope is your SVG\'s Snap.SVG Object
-	 * You can simply call $scope.select(\'#element\')
-	 */		
-}';
+		$animation_js = $animation ? $animation['js'] : '/* EXAMPLE */
+	 Animation.init = function($svg, $atts) {
+	 	/* This function runs immediately after pageload. */
+	 	
+		/**
+		 * Your Animation JS code
+		 * $svg is your SVG\'s Snap.SVG Object
+		 * You can simply call $svg.select(\'#element\')
+		 * $atts contains your WP shortcode atts. Useful to pass data from WP shortcode to your animation ($atts.extras)
+		 */
+		 
+		 $svg.select(\'#my_circle\').attr({
+			 fill: \'red\'
+		 });
+	 }
+	 
+	 Animation.start = function($svg, $atts) {
+		 /* This function runs when the element appears on screen. If start_when_in_viewport is false, it starts right after Animation.init(). */
+		 
+		 $svg.select(\'#my_circle\').animate({
+			transform: \'T150,150 S2,2\'
+		 }, 2000, mina.ease, function() {
+			this.animate({
+				transform: \'T150,150 S-2,2\'
+			}, 1000, mina.ease);
+		 });
+	 }
+	 /* EXAMPLE END */';
 		
 		?>
 		<div id="wp-snap-svg-editor">
