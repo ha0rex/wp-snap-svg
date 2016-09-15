@@ -10,24 +10,30 @@ An SVG Animator Plugin for WordPress, based on Adobe's Web Framework Snap.SVG.
 </ol>
 
 <h3>How to write your Animation JS script?</h3>
+<pre>
 Animation.init = function($svg, $atts) {
-	This function runs immediately after pageload.
-	You can simply call $svg.select('#element').
-	$atts contains your WP shortcode atts. Useful to pass data from WP shortcode to your animation ($atts.extras).
+	/** 
+	 * This function runs immediately after pageload.
+	 * You can simply call $svg.select('#element').
+	 * $atts contains your WP shortcode atts. Useful to pass data from WP shortcode to your animation ($atts.extras).
+	 */
 }
-
+</pre>
+<pre>
 Animation.start = function($svg, $atts) {
-	 This function runs when the element appears on screen. If start_when_in_viewport is false, it starts right after Animation.init().
+	/** 
+	 * This function runs when the element appears on screen. If start_when_in_viewport is false, it starts right after Animation.init().
+	 */
 }
-
+</pre>
 <h3>How to pass data from WordPress to Animation?</h3>
 Shortcode atts are available in the $atts JS object. By default "extras" shortcode attribute is available for this, also in the Visual Composer plugin. You can access it in $atts.extras in your script.
 
 <h3>How to embed your animation?</h3>
-[snap-svg-animation id="ID-OF-ANIMATION" start_when_in_viewport="true/false" start_when_in_viewport_offset="pixels" start_when_in_viewport_delay="seconds" html_id="HTML ID" html_class="HTML CLASSNAMES" extras="EXTRAS FIELD (optional)"]
-
-Set "start_when_in_viewport" attribute to true, if you want your animations to start only when it appears on screen
-You can set up an offset in pixels by the "start_when_in_viewport_offset", and a delay by the "start_when_in_viewport_delay" attributes.
+<strong>[snap-svg-animation id="ID-OF-ANIMATION" start_when_in_viewport="true/false" start_when_in_viewport_offset="pixels" start_when_in_viewport_delay="seconds" html_id="HTML ID" html_class="HTML CLASSNAMES" extras="EXTRAS FIELD (optional)"]</strong><br />
+<br />
+Set "start_when_in_viewport" attribute to true, if you want your animations to start only when it appears on screen<br />
+You can set up an offset in pixels by the "start_when_in_viewport_offset", and a delay by the "start_when_in_viewport_delay" attributes.<br />
 "extras" field is useful if you want to pass data from your shortcode to your animation JS script
 
 
